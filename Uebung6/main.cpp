@@ -4,7 +4,7 @@ using namespace std;
 
 
 
-void ZeigeInhaltArray(int* array, int Groesse)
+void ZeigeInhaltArray(int array[], int Groesse)
 {
 	for (int i = 0; i < Groesse; i++)
 		cout << array[i] << endl;
@@ -12,10 +12,10 @@ void ZeigeInhaltArray(int* array, int Groesse)
 
 
 
-void ZeigeInhaltMultArray(int* array, int Row, int Col)
-{
 
-	//cout << array[10][10] << endl;
+// TODO keine Ahnung 
+void ZeigeInhaltMultArray(int (*array)[10][10])
+{
 
 }
 
@@ -133,19 +133,34 @@ int main()
 
 
 
-
+	// TODO Wie macht man das mit den mutlti dim Arrays einer Funktion zu übergeben
 	int Spalten = 10;
 	int Zeilen = 10;
 
 	//EinmalEins
+	//ZeigeInhaltMultArray(EinmalEins[Zeilen], Zeilen, Spalten);
 
 
 
+	cout << EinmalEins << endl;
 
+	cout << &EinmalEins[0][0] << endl;
+	cout << &EinmalEins[0][1] << endl;
+	cout << &EinmalEins[0][2] << endl;
 
+	cout << &EinmalEins[0][9] << endl;
+	cout << &EinmalEins[1][0] << endl;
+	cout << &EinmalEins[1][1] << endl;
+	cout << &EinmalEins[1][2] << endl;
 
+	cout << &EinmalEins[1][9] << endl;
+	cout << &EinmalEins[2][0] << endl;
 
+	cout << &EinmalEins[2][9] << endl;
+	cout << &EinmalEins[3][0] << endl;
 
+	cout << &EinmalEins[8][9] << endl;
+	cout << &EinmalEins[9][0] << endl;
 
 
 
